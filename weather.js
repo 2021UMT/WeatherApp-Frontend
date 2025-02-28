@@ -5,6 +5,9 @@ const searchButton = document.getElementById("searchbutton");
 const weatherIcon = document.querySelector(".weather-icon");
 
 async function checkWeather(city) {
+    const spinner = document.getElementById("loadingSpinner");
+    spinner.style.display = "block"; 
+
     try {
         const response = await fetch(apiUrl + city);
         const data = await response.json();
@@ -48,6 +51,9 @@ async function checkWeather(city) {
         document.querySelector(".error").innerHTML = "⚠️ Unable to fetch weather data.";
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
+    }
+    finally {
+        spinner.style.display = "none";
     }
 }
 
