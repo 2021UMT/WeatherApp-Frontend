@@ -6,7 +6,8 @@ const weatherIcon = document.querySelector(".weather-icon");
 
 async function checkWeather(city) {
     const spinner = document.getElementById("loadingSpinner");
-    spinner.style.display = "block"; 
+    spinner.style.display = "block";
+    setTimeout(() => { spinner.style.opacity = "1"; }, 50);
 
     try {
         const response = await fetch(apiUrl + city);
@@ -53,7 +54,8 @@ async function checkWeather(city) {
         document.querySelector(".weather").style.display = "none";
     }
     finally {
-        spinner.style.display = "none";
+        setTimeout(() => { spinner.style.opacity = "0"; }, 100); 
+        setTimeout(() => { spinner.style.display = "none"; }, 500);  
     }
 }
 
