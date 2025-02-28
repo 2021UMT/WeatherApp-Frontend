@@ -190,15 +190,19 @@ body {
     display: none; 
     width: 45px;
     height: 45px;
-    border: 5px solid rgba(247, 75, 75, 0.3);
-    border-top: 5px solid #18fb0c;
+    border: 5px solid transparent;
+    border-top: 5px solid #057bfa; 
+    border-right: 5px solid #08bbf7;
+    border-bottom: 5px solid #00e5fe;
+    border-left: 5px solid #04e7ef;
     border-radius: 50%;
     animation: spin 1s linear infinite, fadeIn 0.5s ease-in-out;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
+    opacity: 0; 
+    box-shadow: 0px 0px 10px rgba(135, 248, 104, 0.988);
 }
 
 @keyframes spin {
