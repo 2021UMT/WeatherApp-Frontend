@@ -10,7 +10,7 @@
   <body>
     <button id="themeToggle">🌙 Dark Mode</button>
     <div class="card">
-      <div class="search">     
+      <div class="search">
         <input
           type="text"
           id="cityInput"
@@ -49,6 +49,14 @@
         </div>
       </div>
     </div>
+
+    <div class="summary-card" style="display: none">
+      <h2>📈 Weekly Temperature Summary</h2>
+      <canvas id="weeklyChart" width="400" height="200"></canvas>
+      <div id="dayDetails" class="day-details"></div>
+    </div>
+    <button id="toggleSummary">📊 Show Weekly Summary</button>
+
     <button
       id="installApp"
       style="
@@ -66,11 +74,12 @@
         z-index: 1000;
       "
     >
-    📥 Install App
+      📥 Install App
     </button>
 
     <div class="loading-spinner" id="loadingSpinner"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="weather.js"></script>
   </body>
 </html>
