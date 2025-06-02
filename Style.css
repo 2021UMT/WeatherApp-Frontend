@@ -236,6 +236,27 @@ body {
 }
 
 
+#toggleSummary {
+    margin-top: 20px;
+    background-color: #009ffd;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#toggleSummary:hover {
+    background-color: #007acc;
+}
+
+
 
 
 /* #installApp:hover {
