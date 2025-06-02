@@ -238,8 +238,10 @@ body {
 
 #toggleSummary {
     margin-top: 20px;
-    background-color: #009ffd;
-    color: white;
+    /* background-color: #009ffd; */
+    background: var(--button-bg);
+    /* color: white; */
+    color: var(--text-color);
     border: none;
     padding: 12px 24px;
     border-radius: 30px;
